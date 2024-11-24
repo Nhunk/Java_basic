@@ -17,7 +17,7 @@ public class Bai1_LeTranAnhNhung {
                 check = true;
                 System.out.println("So nguyen hop le.");
             } catch (NumberFormatException e) {
-                System.out.println("Day khong phai la so nguyen! Vui long nhap so nguyen hop le!");
+                System.out.println("Day khong phai la so nguyen! Vui long nhap so nguyen hop le!_");
             } catch (IOException e){
                 System.out.println("Loi "+e.getMessage());
             }
