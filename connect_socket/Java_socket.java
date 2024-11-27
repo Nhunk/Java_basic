@@ -1,4 +1,4 @@
-package java_socket;
+package connect_socket;
 public class Java_socket {}
     
 //241124
