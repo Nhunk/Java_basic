@@ -1,39 +1,34 @@
 package connect_socket;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 import java.util.Scanner;
 
-public class TCPClient_Songuyento {
-
+public class Bai2_TCPClient_XuLyChuoi {
     public static void main(String args[]) {
         String hostname = "localhost";
-        int port = 9876;
+        int port = 9875;
         try (Socket socket = new Socket(hostname, port);
             PrintWriter output = new PrintWriter(socket.getOutputStream(), true); 
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream())); 
             Scanner scanner = new Scanner(System.in)){
             
             while (true) {
-                String text;
-                System.out.println("Nhap so cach bang ';' hoac 'stop' de ket thuc: ");
-                text = scanner.nextLine();
+                System.out.println("Nhap chuoi ('stop' de ket thuc): ");
+                String text = scanner.nextLine();
+
                 output.println(text);
+
                 if (text.equalsIgnoreCase("stop")) {
                     break;
                 }
-                String response = input.readLine();
-                if (response != null) {
-                    System.out.println("So nguyen to: " + response);
-                }            
-                
+                System.out.println(input.readLine()); // Kết quả đếm 'a'
+                System.out.println(input.readLine()); // Kết quả kiểm tra "java"
+                System.out.println(input.readLine()); // Kết quả đảo chuỗi
+            
             }
-            //socket.close();
-        }catch (Exception e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
-    
     }
 }
