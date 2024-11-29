@@ -1,4 +1,4 @@
-package connect_socket;
+package TCP;
 
 import java.io.*;
 import java.net.*;

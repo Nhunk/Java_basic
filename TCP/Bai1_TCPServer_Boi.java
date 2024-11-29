@@ -1,10 +1,7 @@
 package TCP;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +12,7 @@ public class Bai1_TCPServer_Boi {
             ServerSocket serverSocket = new ServerSocket(9876);
             System.out.println("Server is listening on port 9876");
             while (true) {
-                try (Socket connectionSocket = serverSocket.accept();
+                try (Socket connectionSocket = serverSocket.accept(); //Lắng nghe client
                      BufferedReader input = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
                      PrintWriter output = new PrintWriter(connectionSocket.getOutputStream(), true)) {
 
@@ -34,6 +31,7 @@ public class Bai1_TCPServer_Boi {
                                 if (num % 6 == 0) multiplesOf6.add(num);
                                 if (num % 3 == 0) multiplesOf3.add(num);
                             } catch (NumberFormatException e) {
+                                System.out.println("Invalid number: " + numStr);
                             }
                         }
                         output.println("Boi so cua 5 la: " + multiplesOf5);
