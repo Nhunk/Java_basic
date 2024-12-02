@@ -17,9 +17,9 @@ public class tcp_ex {
                     
                     String input;
                     while((input=in.readLine())!=null){
-                        if(input.equalIgnoreCase('stop')){
-                            break;
-                        }
+                        // if(input.equalIgnoreCase('stop')){
+                        //     break;
+                        // }
                     }
                 } catch (Exception e) {
                     // TODO: handle exception
