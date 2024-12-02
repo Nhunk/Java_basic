@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class Bai5 {
+public class Bai1_5 {
 public static void main(String[] args) {
    try {
       File f = new File("filename.txt");

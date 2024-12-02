@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Bai9 {
+public class Bai1_9 {
 public static void main(String[] args) {
     String f = "F:\\study\\HK1_3_2425\\CS420_Hephantan\\java_code\\LAB1\\test.txt";
     try (DataOutputStream dout = new DataOutputStream(new FileOutputStream(f))){

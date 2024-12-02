@@ -1,7 +1,7 @@
 package LAB1;
 
 import java.io.*;
-public class Bai1 {
+public class Bai1_1 {
 public static void main(String[] args) throws IOException{
     byte data[] = new byte[100];
     System.out.print("Nhap mot ky tu: ");;

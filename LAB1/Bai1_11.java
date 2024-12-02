@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-public class Bai11 {
+public class Bai1_11 {
 public static void main(String[] args) {
     String f = "F:\\study\\HK1_3_2425\\CS420_Hephantan\\java_code\\LAB1\\new.txt";
     

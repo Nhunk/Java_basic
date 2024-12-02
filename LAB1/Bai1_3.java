@@ -3,7 +3,7 @@ import java.io.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Bai3 {
+public class Bai1_3 {
 public static void main(String[] args) throws IOException{
     char c;
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

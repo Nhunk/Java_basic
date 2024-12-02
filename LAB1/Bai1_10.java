@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class Bai10 {
+public class Bai1_10 {
 public static void main(String[] args) {
     String f = "F:\\study\\HK1_3_2425\\CS420_Hephantan\\java_code\\LAB1\\example.txt";
     try(DataOutputStream dout = new DataOutputStream(new FileOutputStream(f))) {

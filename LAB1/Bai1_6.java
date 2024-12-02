@@ -2,7 +2,7 @@ package LAB1;
 
 import java.io.PrintWriter;
 
-public class Bai6 {
+public class Bai1_6 {
 public static void main(String[] args) {
 PrintWriter wr = new PrintWriter(System.out, true);
 wr.println("\033[31mMau do\033[0m");

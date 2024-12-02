@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Bai8 {
+public class Bai1_8 {
     public static void main(String[] args) {
         FileInputStream fin = null;
         FileOutputStream fout = null;
