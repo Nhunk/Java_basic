@@ -1,16 +1,12 @@
-package LAB4;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-
 /*Client gởi cho Server 3 số nhập từ bàn phím, mỗi số cách nhau bởi dấu “;”, 
 yêu cầu Server giải phương trình: ax2+ bx + c = 0. 
 Sau đó gởi kết quả về cho Client. 
 Viết chương trình hiển thị kết quả trên màn hình Client theo kỹ thuật TCP. */
+
+package LAB4;
+
+import java.io.*;
+import java.net.*;
 
 public class Bai4_12_TCPServer_PTBacHai {
 public static void main(String[] args) {
@@ -43,20 +39,20 @@ public static void main(String[] args) {
                             if (a == 0) {
                                 output.println("Day khong phai phuong trinh bac 2.");
                             } else {
-                                double discriminant = b * b - 4 * a * c;
-                                if (discriminant > 0) {
-                                    double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-                                    double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-                                    output.println("The roots are: " + root1 + " and " + root2);
-                                } else if (discriminant == 0) {
-                                    double root = -b / (2 * a);
-                                    output.println("The root is: " + root);
+                                double delta = b * b - 4 * a * c;
+                                if (delta > 0) {
+                                    double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                                    double x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                                    output.println("Nghiem cua phuong trinh la: x1 = " + x1 + " va x2 = " + x2);
+                                } else if (delta == 0) {
+                                    double x = -b / (2 * a);
+                                    output.println("Phuong trinh co nghiem kep: " + x);
                                 } else {
-                                    output.println("The equation has no real roots.");
+                                    output.println("Phuong trinh vo nghiem.");
                                 }
                             }
                         } catch (NumberFormatException e) {
-                            output.println("Vui long nhap dung 3 so nguyen.");
+                            output.println("Vui long nhap dung 3 he so cua phuong trinh!");
                         }
                     }
                 }

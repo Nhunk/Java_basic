@@ -1,7 +1,5 @@
 package LAB4;
 
-// Client nhập vào một chuỗi từ bàn phím, sau đó gởi cho Server, yêu cầu Server đảo ngược chuỗi đó. Viết chương trình hiển thị chuổi đảo ngược trên màn hình Client theo giao thức TCP.
-
 import java.io.*;
 import java.net.*;
 

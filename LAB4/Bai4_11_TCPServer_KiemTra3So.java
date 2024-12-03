@@ -1,5 +1,6 @@
+
+
 package LAB4;
-//Client nhập vào một dãy số nguyên gồm n số (n>=3), cách nhau bởi dấu “;”từ bàn phím, sau đó gởi cho Server, yêu cầu Server tính tổng dãy số đó. Sau đó Server gởi kết quả cho Client. Xuất kết quả trên màn hình Client. 
 
 import java.io.*;
 import java.net.*;

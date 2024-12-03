@@ -1,9 +1,10 @@
+/*Client nhập từ bàn phím 1 số nguyên n. 
+Sau đó gởi số nguyên này cho Server, yêu cầu Server tính tổng S:= 1+2+….+ n. 
+Viết chương trình hiển thị tổng trên ở màn hình Client bằng giao thức TCP. */
+
 package LAB4;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 

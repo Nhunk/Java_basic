@@ -1,11 +1,7 @@
 package LAB4;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 
 public class Bai4_10_TCPServer_TongSoNguyen {
     public static void main(String[] args) {
