@@ -1,13 +1,13 @@
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.*;
 
-public class Bai4_13_TCPServer_ {
+public class B13_TCPS2 {
     public static void main(String[] args) {
         try {
-            ServerSocket server = new ServerSocket(2013);
-            System.out.println("Server is listening on port 2013");
+            ServerSocket server = new ServerSocket(2014);
+            System.out.println("Server is listening on port 2014");
 
             while (true) {
                 try (Socket connect = server.accept();
@@ -32,11 +32,9 @@ public class Bai4_13_TCPServer_ {
                             int c = Integer.parseInt(in[2].trim());
                             int d = Integer.parseInt(in[3].trim());
 
-                            int tong = 3*a + 2*b;
                             int hieu = 7*c - 8*d;
-                            int result = 2*tong + 4*hieu;
 
-                            output.println("Ket qua cua S = 2*(3a+2b) + 4*(7c-8d) la: " + result);
+                            output.println(hieu);
                         } catch (NumberFormatException e) {
                             System.out.println("Vui long nhap dung 4 so nguyen.");
                         }

@@ -1,13 +1,13 @@
 /* Client nhập vào một chuỗi từ bàn phím, sau đó gởi cho Server, 
  yêu cầu Server đảo ngược chuỗi đó. 
  Viết chương trình hiển thị chuổi đảo ngược trên màn hình Client theo giao thức TCP. */
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Bai4_9_TCPClient_DaoNguoc {
+public class B9_TCPC_DaoNguoc {
     public static void main(String[] args) {
         String hostname = "localhost";
         int port = 9875;

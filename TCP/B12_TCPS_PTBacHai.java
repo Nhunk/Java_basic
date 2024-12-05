@@ -3,12 +3,12 @@ yêu cầu Server giải phương trình: ax2+ bx + c = 0.
 Sau đó gởi kết quả về cho Client. 
 Viết chương trình hiển thị kết quả trên màn hình Client theo kỹ thuật TCP. */
 
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.*;
 
-public class Bai4_12_TCPServer_PTBacHai {
+public class B12_TCPS_PTBacHai {
 public static void main(String[] args) {
     try {
             ServerSocket serverSocket = new ServerSocket(9874);

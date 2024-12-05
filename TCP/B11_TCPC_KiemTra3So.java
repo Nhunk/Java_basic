@@ -3,13 +3,13 @@ cách nhau bởi dấu “;”từ bàn phím, sau đó gởi cho Server
 yêu cầu Server tính tổng dãy số đó. Sau đó Server gởi kết quả cho Client. 
 Xuất kết quả trên màn hình Client. */
 
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Bai4_11_TCPClient_KiemTra3So {
+public class B11_TCPC_KiemTra3So {
     public static void main(String[] args) {
         String hostname = "localhost";
         int port = 9874;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bai2_LeTranAnhNhung {
+public class Bai2_LeTranAnhNhung_2ChuSo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap so luong phan tu cua day: ");

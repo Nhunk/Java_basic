@@ -1,11 +1,11 @@
-// a. Đếm số ký tự 'a' trong chuỗi
-// b. Kiểm tra chuỗi có chứa "java" hay không
-// c. Đảo ngược chuỗi
+/*a. Đếm số ký tự 'a' trong chuỗi
+  b. Kiểm tra chuỗi có chứa "java" hay không
+  c. Đảo ngược chuỗi */
 
 package UDP;
 import java.io.IOException;
 import java.net.*;
-public class Bai2_UDPServer_KyTu {
+public class B2_UDPS_KyTu {
     public static void main(String[] args) {
         try{
             DatagramSocket socket = new DatagramSocket(2004);

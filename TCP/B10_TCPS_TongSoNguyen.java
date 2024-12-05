@@ -3,7 +3,7 @@ package TCP;
 import java.io.*;
 import java.net.*;
 
-public class Bai2_TCPServer_XuLyChuoi {
+public class B10_TCPS_TongSoNguyen {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(9875);
@@ -19,18 +19,12 @@ public class Bai2_TCPServer_XuLyChuoi {
                         if (sentence.equalsIgnoreCase("stop")) {
                             break;
                         }
-                        // a. Đếm số ký tự 'a' trong chuỗi
-                        long countA = sentence.chars().filter(ch -> ch == 'a' || ch == 'A').count();
-
-                        // b. Kiểm tra chuỗi có chứa "java" hay không
-                        boolean containsJava = sentence.toLowerCase().contains("java");
-
-                        // c. Đảo ngược chuỗi
-                        String reversed = new StringBuilder(sentence).reverse().toString();
-
-                        output.println("So ky tu 'a' hoac 'A': " + countA);
-                        output.println("Co chua tu 'java': " + (containsJava ? "Co" : "Khong"));
-                        output.println("Chuoi dao nguoc: " + reversed);
+                        int n = Integer.parseInt(sentence);
+                        int sum = 0;
+                        for(int i = 0; i <=n;i++){
+                            sum +=i;
+                        }
+                        output.println("Tong cac so tu 1 den "+n+" : "+sum);
                     }
                 }
             }

@@ -1,11 +1,11 @@
 
 
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.*;
 
-public class Bai4_11_TCPServer_KiemTra3So {
+public class B11_TCPS_KiemTra3So {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(9874);

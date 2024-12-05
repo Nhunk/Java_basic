@@ -8,13 +8,13 @@ Viết chương trình hiển thị kết quả trên màn hình Client theo k�
 1. Các giá trị  a,b, k và p được nhập từ bàn phím trên cùng dòng, mỗi giá trị cách nhau bởi dấu “;”.
 2. Quá trình được thực hiện nhiều lần cho đến khi dòng gởi có dạng “stop” thì quá trình trên chấm dứt. 
  */
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Bai4_14_TCPClient_Fibonacci {
+public class B14_TCPC_Fibonacci {
     public static void main(String[] args) {
         String hostname = "localhost";
         int port = 2014;

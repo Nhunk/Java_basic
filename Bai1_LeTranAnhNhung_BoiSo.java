@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bai1_LeTranAnhNhung {
+public class Bai1_LeTranAnhNhung_BoiSo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhap so n: ");

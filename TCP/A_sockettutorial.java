@@ -1,5 +1,5 @@
 package TCP;
-public class Java_socket {}
+public class A_sockettutorial {}
     
 //241124
 // java.net.Socket được đưa vào hai tham số hostname và portnumber(lấy khi server khởi tạo)

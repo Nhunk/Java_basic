@@ -4,7 +4,7 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UDPServer_2ChuSo {
+public class B3_UDPS_2ChuSo {
     public static void main(String[] args) {
         try {
             DatagramSocket socket = new DatagramSocket(12345);

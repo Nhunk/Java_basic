@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
-public class Bai2_TCPClient_XuLyChuoi {
+public class A2_TCPC_XuLyChuoi {
     public static void main(String args[]) {
         String hostname = "localhost";
         int port = 9875;

@@ -2,13 +2,13 @@
 Sau đó gởi số nguyên này cho Server, yêu cầu Server tính tổng S:= 1+2+….+ n. 
 Viết chương trình hiển thị tổng trên ở màn hình Client bằng giao thức TCP. */
 
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Bai4_10_TCPClient_TongSoNguyen {
+public class B10_TCPC_TongSoNguyen {
     public static void main(String[] args) {
         
     String hostname = "localhost";

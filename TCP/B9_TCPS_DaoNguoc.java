@@ -1,10 +1,11 @@
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.*;
 
-public class Bai4_10_TCPServer_TongSoNguyen {
+public class B9_TCPS_DaoNguoc {
     public static void main(String[] args) {
+
         try {
             ServerSocket serverSocket = new ServerSocket(9875);
             System.out.println("Server is listening on port 9875");
@@ -19,12 +20,8 @@ public class Bai4_10_TCPServer_TongSoNguyen {
                         if (sentence.equalsIgnoreCase("stop")) {
                             break;
                         }
-                        int n = Integer.parseInt(sentence);
-                        int sum = 0;
-                        for(int i = 0; i <=n;i++){
-                            sum +=i;
-                        }
-                        output.println("Tong cac so tu 1 den "+n+" : "+sum);
+                        String reversed = new StringBuilder(sentence).reverse().toString();
+                        output.println("Chuoi dao nguoc: " + reversed);
                     }
                 }
             }

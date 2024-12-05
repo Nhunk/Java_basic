@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class TCPClient_Songuyento {
+public class TCPC_Songuyento {
 
     public static void main(String args[]) {
         String hostname = "localhost";

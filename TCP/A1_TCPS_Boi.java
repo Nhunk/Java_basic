@@ -5,7 +5,7 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bai1_TCPServer_Boi {
+public class A1_TCPS_Boi {
 
     public static void main(String[] args) {
         try {

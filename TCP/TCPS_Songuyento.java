@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TCPServer_Songuyento {
+public class TCPS_Songuyento {
     public static boolean isPrime(int num) {
         if(num < 2) {
             return false;

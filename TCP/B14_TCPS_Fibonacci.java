@@ -1,7 +1,7 @@
-package LAB4;
+package TCP;
 import java.io.*;
 import java.net.*;
-public class Bai4_14_TCPServer_Fibonacci {
+public class B14_TCPS_Fibonacci {
     public static void main(String[] args) {
         try {
             ServerSocket server = new ServerSocket(2014);

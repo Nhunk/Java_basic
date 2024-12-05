@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
-public class Bai1_TCPClient_Boi {
+public class A1_TCPC_Boi {
     public static void main(String[] args) {
         String hostname = "localhost";
         int port = 9876;

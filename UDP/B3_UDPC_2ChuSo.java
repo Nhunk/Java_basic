@@ -3,7 +3,7 @@ package UDP;
 import java.net.*;
 import java.util.Scanner;
 
-public class UDPClient_2ChuSo {
+public class B3_UDPC_2ChuSo {
     public static void main(String[] args) {
         try {
             DatagramSocket socket = new DatagramSocket();

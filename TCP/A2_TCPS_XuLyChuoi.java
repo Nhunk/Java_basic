@@ -1,11 +1,10 @@
-package LAB4;
+package TCP;
 
 import java.io.*;
 import java.net.*;
 
-public class Bai4_9_TCPServer_DaoNguoc {
+public class A2_TCPS_XuLyChuoi {
     public static void main(String[] args) {
-
         try {
             ServerSocket serverSocket = new ServerSocket(9875);
             System.out.println("Server is listening on port 9875");
@@ -20,7 +19,17 @@ public class Bai4_9_TCPServer_DaoNguoc {
                         if (sentence.equalsIgnoreCase("stop")) {
                             break;
                         }
+                        // a. Đếm số ký tự 'a' trong chuỗi
+                        long countA = sentence.chars().filter(ch -> ch == 'a' || ch == 'A').count();
+
+                        // b. Kiểm tra chuỗi có chứa "java" hay không
+                        boolean containsJava = sentence.toLowerCase().contains("java");
+
+                        // c. Đảo ngược chuỗi
                         String reversed = new StringBuilder(sentence).reverse().toString();
+
+                        output.println("So ky tu 'a' hoac 'A': " + countA);
+                        output.println("Co chua tu 'java': " + (containsJava ? "Co" : "Khong"));
                         output.println("Chuoi dao nguoc: " + reversed);
                     }
                 }

@@ -3,7 +3,7 @@ import java.io.*;
 import java.net.*;
 
 
-public class Bai3_TCPServer_KiemTra3So {
+public class A3_TCPS_KiemTra3So {
     public static void main(String[] args) {
         try{
             ServerSocket serverSocket = new ServerSocket(9874);
