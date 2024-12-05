@@ -1,7 +1,7 @@
 package UDP;
 import java.net.*;
 import java.util.Scanner;
-public class B2_UDPC_KyTu {
+public class B2_UDPC_XuLyChuoi {
      public static void main(String[] args) {
         try {
           DatagramSocket socket = new DatagramSocket();

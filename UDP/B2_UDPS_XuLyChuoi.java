@@ -5,7 +5,7 @@
 package UDP;
 import java.io.IOException;
 import java.net.*;
-public class B2_UDPS_KyTu {
+public class B2_UDPS_XuLyChuoi {
     public static void main(String[] args) {
         try{
             DatagramSocket socket = new DatagramSocket(2004);
