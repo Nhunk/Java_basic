@@ -11,6 +11,7 @@ public class B14_TCPS_Fibonacci {
                 try (Socket connect = server.accept();
                 BufferedReader input = new BufferedReader(new InputStreamReader(connect.getInputStream()));
                 PrintWriter output = new PrintWriter(connect.getOutputStream(),true)){
+                    
                     String text;
 
                     while((text=input.readLine())!=null){
@@ -60,8 +61,6 @@ public class B14_TCPS_Fibonacci {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-           e.printStackTrace();
         }
     }
 }

@@ -22,7 +22,7 @@ public class B2_UDPS_XuLyChuoi {
                 long countA = received.chars().filter(ch -> ch == 'a' || ch == 'A').count();
                 boolean containsJava = received.toLowerCase().contains("java");
                 String reversed = new StringBuilder(received).reverse().toString();
-                String response = "So ki tu A: " + (countA >0 ? Long.toString(countA) : "No find!") + "\n"+"Chuoi chua ki tu 'java': "+ (containsJava ? "co" : "khong")+"\nChuoi dao nguoc: "+reversed;
+                String response = "So ki tu A: " + (countA > 0 ? Long.toString(countA) : "No find!") + "\n"+"Chuoi chua ki tu 'java': "+ (containsJava ? "co" : "khong")+"\nChuoi dao nguoc: "+reversed;
                 byte[] responseData=response.getBytes();
                 DatagramPacket responsePacket = new DatagramPacket(responseData,responseData.length,requestPacket.getAddress(),requestPacket.getPort());
                 socket.send(responsePacket);

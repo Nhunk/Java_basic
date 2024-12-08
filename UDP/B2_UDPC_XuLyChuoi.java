@@ -13,14 +13,15 @@ public class B2_UDPC_XuLyChuoi {
             System.out.println("______________________________________");
             System.out.println("Nhap day ky tu hoac 'stop' de dung: ");
             String text = scan.nextLine();
-
+            
             byte[] data=text.getBytes();
             DatagramPacket packet = new DatagramPacket(data, data.length,addr,2004);
             socket.send(packet);
-
+            
             if(text.equalsIgnoreCase("stop")){
-                break;
+              break;
             }
+            
             DatagramPacket responsePacket = new DatagramPacket(buffer, buffer.length);
             socket.receive(responsePacket);
 

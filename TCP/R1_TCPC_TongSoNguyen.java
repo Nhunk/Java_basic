@@ -8,7 +8,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class B10_TCPC_TongSoNguyen {
+public class R1_TCPC_TongSoNguyen {
     public static void main(String[] args) {
         
     String hostname = "localhost";
