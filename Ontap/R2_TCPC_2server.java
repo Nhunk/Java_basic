@@ -7,7 +7,7 @@ Hiển thị kết quả của S trên màn hình Client theo kỹ thuật TCP t
 1. Các giá trị  a,b,c,d được nhập từ bàn phím trên cùng  dòng, mỗi giá trị cách nhau bởi dấu “;”
 2. Quá trình được thực hiện nhiều lần cho đến khi dòng gởi có dạng “quit” thì quá trình trên chấm dứt. 
  */
-package TCP;
+package Ontap;
 
 import java.io.*;
 import java.net.*;

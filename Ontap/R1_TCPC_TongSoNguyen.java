@@ -2,7 +2,7 @@
 Sau đó gởi số nguyên này cho Server, yêu cầu Server tính tổng S:= 1+2+….+ n. 
 Viết chương trình hiển thị tổng trên ở màn hình Client bằng giao thức TCP. */
 
-package TCP;
+package Ontap;
 
 import java.io.*;
 import java.net.Socket;

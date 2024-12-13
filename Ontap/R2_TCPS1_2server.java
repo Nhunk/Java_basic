@@ -1,4 +1,4 @@
-package TCP;
+package Ontap;
 
 import java.io.*;
 import java.net.*;
@@ -8,11 +8,14 @@ public class R2_TCPS1_2server {
         try {
             ServerSocket server = new ServerSocket(2001);
             System.out.println("Server is listening on port 2001");
+
             while(true){
                 try (Socket connect = server.accept();
                 BufferedReader in = new BufferedReader(new InputStreamReader(connect.getInputStream()));
                 PrintWriter out = new PrintWriter(connect.getOutputStream(),true)){
+                    
                     String text;
+                    
                     while((text = in.readLine())!=null){
                         if(text.equalsIgnoreCase("quit")){
                             break;
