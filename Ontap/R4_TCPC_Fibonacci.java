@@ -21,7 +21,7 @@ public class R4_TCPC_Fibonacci {
         int port = 12345;
         try(Socket socket = new Socket(hostname, port);
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            PrintWriter output = new PrintWriter(socket.getOutputStream(),true)){ {
+            PrintWriter output = new PrintWriter(socket.getOutputStream(),true)){ 
             
         } catch (Exception e) {
             // TODO: handle exception

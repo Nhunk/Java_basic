@@ -5,33 +5,43 @@ Viết chương trình hiển thị tổng trên ở màn hình Client bằng gi
 package Ontap;
 
 import java.io.*;
-import java.net.Socket;
+import java.net.*;
 import java.util.Scanner;
 
 public class R1_TCPC_TongSoNguyen {
     public static void main(String[] args) {
-        
-    String hostname = "localhost";
-        int port = 9875;
+        String hostname = "localhost";
+        int port = 2004;
         try (Socket socket = new Socket(hostname, port);
-                PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
                 BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                Scanner scanner = new Scanner(System.in)) {
-
+                PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+                Scanner scan = new Scanner(System.in);) {
+            String text;
             while (true) {
-                System.out.println("Nhap so nguyen n ('stop' de ket thuc): ");
-                String text = scanner.nextLine();
+                System.out.println("Nhap so nguyen n: ");
 
-                output.println(text);
+                while (true) {
+                    text = scan.nextLine();
+                    String[] s = text.split(";");
+                    int n = Integer.parseInt(s[0]);
+                    if (s.length == 1 && n >= 50 && n <= 100) {
+                        output.println(n);
+                        break;
+                    } else {
+                        System.out.println("Nhap lai so nguyen n thuoc [50;100]: ");
+                    }
+
+                }
 
                 if (text.equalsIgnoreCase("stop")) {
                     break;
                 }
-                System.out.println(input.readLine());
 
+                System.out.println(input.readLine());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        } catch (Exception e) {
+            // TODO: handle exception
         }
     }
 }
