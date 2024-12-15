@@ -9,22 +9,41 @@ Biết rằng:
 package Ontap;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
-import javax.print.event.PrintEvent;
 
 public class R4_TCPC_Fibonacci {
     public static void main(String[] args) {
         String hostname = "localhost";
-        int port = 12345;
-        try(Socket socket = new Socket(hostname, port);
-            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            PrintWriter output = new PrintWriter(socket.getOutputStream(),true)){ 
-            
-        } catch (Exception e) {
-            // TODO: handle exception
+        int port = 2014;
+
+        try (Socket socket = new Socket(hostname, port);
+        BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter output = new PrintWriter(socket.getOutputStream(),true);
+        Scanner scan = new Scanner(System.in)){
+            while(true){
+                System.out.println("Nhap cac gia tri a, b, k, p (cach nhau boi dau ';', 'stop' de ket thuc): ");
+                String text = scan.nextLine();
+                if(text.equalsIgnoreCase("stop")){
+                    break;
+                }
+                String[] in = text.split(";");
+                if(in.length !=4){
+                    System.out.println("Vui long nhap dung 4 gia tri a, b, k, p cach nhau boi dau ';'");
+                    continue;
+                }
+                output.println(text);
+
+                
+
+                System.out.println(input.readLine());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
