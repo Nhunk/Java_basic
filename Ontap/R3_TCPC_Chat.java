@@ -1,4 +1,3 @@
-/*Viết chương trình chat đơn giản giữa 2 máy tính theo giao thức TCP. */
 package Ontap;
 
 import java.io.BufferedReader;
@@ -9,31 +8,44 @@ import java.util.Scanner;
 
 public class R3_TCPC_Chat {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("localhost", 12345)) {
+        try (Socket socket = new Socket("localhost", 2004)) {
             System.out.println("Connected to server.");
 
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             Scanner sc = new Scanner(System.in);
-            String clientMessage, serverMessage;
 
+            // Thread to receive messages from the server
+            Thread receiveThread = new Thread(() -> {
+                try {
+                    String serverMessage;
+                    while ((serverMessage = in.readLine()) != null) {
+                        if (serverMessage.equalsIgnoreCase("bye")) {
+                            System.out.println("Server disconnected.");
+                            break;
+                        }
+                        System.out.println("Server: " + serverMessage);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+
+            receiveThread.start();
+
+            // Main loop to send messages to the server
+            String clientMessage;
             while (true) {
-                
                 System.out.print("You: ");
                 clientMessage = sc.nextLine();
                 out.println(clientMessage);
                 if (clientMessage.equalsIgnoreCase("bye")) {
-                    System.out.println("Ending chat.");
-                    break;
-                }
-
-                serverMessage = in.readLine();
-                System.out.println("Server: " + serverMessage);
-                if (serverMessage.equalsIgnoreCase("bye")) {
-                    System.out.println("Server disconnected.");
                     break;
                 }
             }
+
+            socket.close();
+            System.out.println("Disconnected from server.");
         } catch (Exception e) {
             e.printStackTrace();
         }

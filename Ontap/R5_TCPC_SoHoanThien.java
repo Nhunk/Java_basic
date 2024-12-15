@@ -7,6 +7,34 @@ Kết quả: Số hoàn thiện: 6 vị trí trong dãy số: 3
  */
 package Ontap;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
 public class R5_TCPC_SoHoanThien {
-    
+    public static void main(String[] args) {
+        String hostname = "localhost";
+        int port = 2004;
+        try (Socket socket = new Socket(hostname, port);
+                BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+                Scanner scan = new Scanner(System.in)) {
+            String text;
+            while (true) {
+                System.out.println("Nhap day so, cach nhau boi dau ';' hoac 'stop' de dung: ");
+                text = scan.nextLine();
+                output.println(text);
+
+                if (text.equalsIgnoreCase("stop")) {
+                    break;
+                }
+                System.out.println("__________________________________________");
+                System.out.println("Ket qua: \n" + input.readLine());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

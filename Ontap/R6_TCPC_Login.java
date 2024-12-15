@@ -12,6 +12,44 @@ User =”CS420”, Password =”123”
  */
 package Ontap;
 
+import java.net.*;
+import java.io.*;
+import java.util.Scanner;
+
 public class R6_TCPC_Login {
+    public static void main(String[] args) {
+        String hostname = "localhost";
+        int port = 2004;
+        try (Socket socket = new Socket(hostname, port);
+                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                Scanner scan = new Scanner(System.in)) {
+            String text;
+            while (true) {
+                System.out.println("Nhap User va Password ngan cach boi ';': ");
+                text = scan.nextLine();
+                out.println(text);
+
+                if(text.equalsIgnoreCase("exit")){
+                    break;
+                }
+                
+                String result = in.readLine();
+                if(result.equalsIgnoreCase("success")){
+                    System.out.println("Ban da truy cap thanh cong");
+                    break;
+                }else if(result.equalsIgnoreCase("Disconnect")){
+                    System.out.println("Ban da nhap sai 3 lan, ban da het quyen truy cap vao he thong");
+                    break;
+                }else{
+                    System.out.println(result);
+                }
+            }
+            }catch (IOException e) {
+                e.printStackTrace();
     
-}
+            }
+
+        } 
+    }
+
