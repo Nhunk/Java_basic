@@ -30,26 +30,25 @@ public class R6_TCPC_Login {
                 text = scan.nextLine();
                 out.println(text);
 
-                if(text.equalsIgnoreCase("exit")){
+                if (text.equalsIgnoreCase("exit")) {
                     break;
                 }
-                
+
                 String result = in.readLine();
-                if(result.equalsIgnoreCase("success")){
+                if (result.equalsIgnoreCase("success")) {
                     System.out.println("Ban da truy cap thanh cong");
                     break;
-                }else if(result.equalsIgnoreCase("Disconnect")){
+                } else if (result.equalsIgnoreCase("disconnect")) {
                     System.out.println("Ban da nhap sai 3 lan, ban da het quyen truy cap vao he thong");
                     break;
-                }else{
+                } else {
                     System.out.println(result);
                 }
             }
-            }catch (IOException e) {
-                e.printStackTrace();
-    
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
 
-        } 
+        }
+
     }
-
+}

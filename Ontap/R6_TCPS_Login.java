@@ -12,10 +12,11 @@ public class R6_TCPS_Login {
                     BufferedReader input = new BufferedReader(new InputStreamReader(connect.getInputStream()));
                     PrintWriter output = new PrintWriter(connect.getOutputStream(), true)) {
                 String text;
+                int count = 0;
                 while (true) {
                     text = input.readLine();
                     String[] arr = text.split(";");
-                    int count = 0;
+                    
                     if (arr[0].equalsIgnoreCase("admin") && arr[1].equalsIgnoreCase("admin")) {
                         output.println("success");
                     } else {
@@ -27,7 +28,6 @@ public class R6_TCPS_Login {
                         output.println("User hoac Password cua ban khong dung, yeu cau nhap lai");
 
                     }
-
                 }
                 server.close();
             }
