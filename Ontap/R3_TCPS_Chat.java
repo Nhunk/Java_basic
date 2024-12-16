@@ -13,7 +13,7 @@ public class R3_TCPS_Chat {
             System.out.println("Client connected.");
 
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
+            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             Scanner sc = new Scanner(System.in);
             String clientMessage, serverMessage;
 
@@ -28,7 +28,7 @@ public class R3_TCPS_Chat {
 
                 System.out.print("You: ");
                 serverMessage = sc.nextLine();
-                out.writeBytes(serverMessage);
+                out.println(serverMessage);
                 if (serverMessage.equalsIgnoreCase("bye")) {
                     System.out.println("Ending chat.");
                     break;
