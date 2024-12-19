@@ -27,12 +27,12 @@ public class R7_TCPS_GiaiPT {
                     int c = Integer.parseInt(arr[2]);
                     double delta = b*b - 4*a*c;
                     if(a==0){
-                        output.println("Phuong trinh co nghiem kep: " + -b/(2*a));
+                        output.println("Phuong trinh co nghiem kep: x = " + -b/(2*a));
                     }else{
                         if(delta < 0){
                             output.println("Phuong trinh vo nghiem");
                         }else if(delta == 0){
-                            output.println("Phuong trinh co nghiem kep: " + -b/(2*a));
+                            output.println("Phuong trinh co nghiem kep: x = " + -b/(2*a));
                         }else{
                             double x1 = (-b + Math.sqrt(delta))/(2*a);
                             double x2 = (-b - Math.sqrt(delta))/(2*a);
@@ -44,7 +44,7 @@ public class R7_TCPS_GiaiPT {
 
             }
         } catch (Exception e) {
-            e.printStackTrace();// TODO: handle exception
+            e.printStackTrace();
         }
     }
 }

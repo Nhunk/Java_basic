@@ -10,8 +10,8 @@ import java.net.Socket;
 public class R4_TCPS_Fibonacci {
     public static void main(String[] args) {
         try {
-            ServerSocket server = new ServerSocket(2014);
-            System.out.println("Server is listening on port 2014");
+            ServerSocket server = new ServerSocket(2004);
+            System.out.println("Server is listening on port 2004");
 
             while (true) {
                 try (Socket connect = server.accept();
@@ -27,7 +27,6 @@ public class R4_TCPS_Fibonacci {
 
                         String[] in = text.split(";");
                         
-
                         try {
                             int a = Integer.parseInt(in[0].trim());
                             int b = Integer.parseInt(in[1].trim());

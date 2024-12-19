@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class R4_TCPC_Fibonacci {
     public static void main(String[] args) {
         String hostname = "localhost";
-        int port = 2014;
+        int port = 2004;
 
         try (Socket socket = new Socket(hostname, port);
         BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -36,10 +36,9 @@ public class R4_TCPC_Fibonacci {
                     System.out.println("Vui long nhap dung 4 gia tri a, b, k, p cach nhau boi dau ';'");
                     continue;
                 }
+
                 output.println(text);
-
                 
-
                 System.out.println(input.readLine());
             }
         } catch (IOException e) {

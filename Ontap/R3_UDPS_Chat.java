@@ -31,7 +31,7 @@ public class R3_UDPS_Chat {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();// TODO: handle exception
+            e.printStackTrace();
         }
     }
 }
