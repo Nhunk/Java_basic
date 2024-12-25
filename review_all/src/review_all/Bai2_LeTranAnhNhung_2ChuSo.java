@@ -1,3 +1,4 @@
+package review_all;
 import java.util.Scanner;
 
 public class Bai2_LeTranAnhNhung_2ChuSo {
