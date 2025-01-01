@@ -8,13 +8,13 @@ public class R3_RMIC_Chat {
         try {
             R3_RMI_interface chat = (R3_RMI_interface) Naming.lookup("rmi://localhost:12345/chat");
             Scanner sc = new Scanner(System.in);
-            String clientMessage, serverMessage;
+            String clientMessage;
 
             // Thread to receive messages from the server
             Thread receiveThread = new Thread(() -> {
                 try {
                     while (true) {
-                        serverMessage = chat.receiveMessage();
+                        String serverMessage = chat.receiveMessage();
                         System.out.println("Server: " + serverMessage);
                         if (serverMessage.equalsIgnoreCase("bye")) {
                             System.out.println("Server disconnected.");
